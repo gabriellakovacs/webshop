@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>webshop product</title>
+
+
+    <!-- CSS -->
+
+    
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="carouselContainer col-sm-6">
+            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#productCarousel" data-slide-to="1"></li>
+                    <li data-target="#productCarousel" data-slide-to="2"></li>
+                    <li data-target="#productCarousel" data-slide-to="3"></li>
+                    <li data-target="#productCarousel" data-slide-to="4"></li>
+                </ol>
+                <div id="backToFirst">vissza az elsõ slide-ra</div>
+
+                <div class="carousel-inner">
+                    <div class="item active" id="image0">
+                        <img src="img/lv0.jpg" alt="...">
+                    </div>
+                    <div class="item" id="image1">
+                        <img src="img/lv1.jpg" alt="...">
+                    </div>
+                    <div class="item" id="image2">
+                        <img src="img/lv2.jpg" alt="...">
+                    </div>
+                    <div class="item" id="image3">
+                        <img src="img/lv3.jpg" alt="...">
+                    </div>
+                    <div class="item" id="image4">
+                        <img src="img/lv4.jpg" alt="...">
+                    </div>
+                    
+                </div>
+                
+                <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div> <!-- Carousel -->
+        </div> <!-- Carousel Container-->
+
+        <div class="productDescriptionContainer col-sm-6">
+            <dl>
+              <dt>termék neve</dt>
+              <dd id="productName" class="productDescription">
+                <p class="image0 active">név0</p>
+                <p class="image1">név1</p>
+                <p class="image2">név2</p>
+                <p class="image3">név3</p>
+                <p class="image4">név4</p>
+              </dd>
+              <br>
+              <dt>leírás</dt>
+              <dd id="productDescription" class="productDescription">
+                <p class="image0 active">leírás0</p>
+                <p class="image1">leírás1</p>
+                <p class="image2">leírás2</p>
+                <p class="image3">leírás3</p>
+                <p class="image4">leírás4</p>
+              </dd>
+              <br>
+              <dt>anyag</dt>
+              <dd id="productMaterial" class="productDescription">
+                <p class="image0 active">anyag0</p>
+                <p class="image1">anyag1</p>
+                <p class="image2">anyag2</p>
+                <p class="image3">anyag3</p>
+                <p class="image4">anyag4</p>
+              </dd>
+              <br>
+              <dt>ár</dt>
+              <dd id="productPrice" class="productDescription">
+                <p class="image0 active">ár0</p>
+                <p class="image1">ár1</p>
+                <p class="image2">ár2</p>
+                <p class="image3">ár3</p>
+                <p class="image4">ár4</p>
+              </dd>
+              <br>
+            </dl>
+
+            <form>
+                <fieldset>
+                    <legend>méret:</legend>
+                    <label for="size34">34</label>
+                    <input type="radio" name="size" value="34" id="size34">
+
+                    <label for="size36">36</label>
+                    <input type="radio" name="size" value="36" id="size36">
+
+                    <label for="size36">36</label>
+                    <input type="radio" name="size" value="36" id="size36">
+
+                    <label for="size38">38</label>
+                    <input type="radio" name="size" value="38" id="size38">
+
+                    <label for="size40">40</label>
+                    <input type="radio" name="size" value="40" id="size40">
+
+                    <label for="size42">42</label>
+                    <input type="radio" name="size" value="42" id="size42">
+
+                    <label for="size44">44</label>
+                    <input type="radio" name="size" value="44" id="size44">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>szín:</legend>
+                    
+                </fieldset>
+
+                <input type="submit" value="ADD TO CART">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+    <div id="windowSize"></div>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="windowSize.js"></script>
+    <script type="text/javascript" src="removeCarouselIndicators.js"></script>
+    
+
+
+
+</body>
+</html>
