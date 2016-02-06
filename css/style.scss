@@ -1,0 +1,88 @@
+$mainBackground: #000F14;
+$carouselNav: #ffffff;
+$productDescriptionColorAndBorder:  #FFFAF0;
+
+body {
+    background: $mainBackground;
+    padding-top: 5%;
+}
+#windowSize {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: grey;
+    border: 1px solid grey;
+    padding:1%;
+}
+
+.carouselContainer img {
+    margin: auto;
+}
+.glyphicon-chevron-left {
+    color: $carouselNav;
+}
+#backToFirst {
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    z-index: 11;
+    width: 40%;
+    padding-left: 0;
+    margin-left: -20%;
+    text-align: center;
+    text-align: center;
+    border: 1px solid $carouselNav;
+    color: $carouselNav;
+    cursor: pointer;
+    visibility: hidden;
+}
+.chooseSize input, .chooseColor input{
+    visibility: hidden;
+}
+.productDescriptionContainer {
+    color: $productDescriptionColorAndBorder;
+}
+
+.chooseSize label, .chooseColor label{
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    border: 2px solid $productDescriptionColorAndBorder;
+    cursor: pointer;
+    
+
+}
+
+.chooseSize input:checked + label, .chooseColor input:checked + label{
+    border: 3px solid $productDescriptionColorAndBorder;
+    border-radius: 60%;
+   
+}
+
+.addToCart {
+    background: none;
+    border: 1px solid $productDescriptionColorAndBorder;
+    padding: 2%;
+}
+.addToCart:hover {
+    background: $productDescriptionColorAndBorder;
+    color: $mainBackground;
+}
+
+.productDescription p {
+    display: none;
+}
+.productDescription .active {
+    display: inline;
+}
+dd, dt {
+    display: inline;
+}
+.carouselArrowContainer.left,  .carouselArrowContainer.right{
+    background-image: none;
+}
+
+.arrow {
+    border:none;
+}
