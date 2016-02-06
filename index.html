@@ -45,10 +45,10 @@
                     
                 </div>
                 
-                <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+                <a class="left carousel-control carouselArrowContainer" href="#productCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+                <a class="right carousel-control carouselArrowContainer" href="#productCarousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div> <!-- Carousel -->
@@ -117,12 +117,25 @@
 
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="chooseColor">
                     <legend>szín:</legend>
-                    
+                    <input type="radio" name="color" value="34" id="color-ffffff">
+                    <label for="color-ffffff"></label>
+
+                    <input type="radio" name="color" value="34" id="color-000000">
+                    <label for="color-000000"></label>
+
+                    <input type="radio" name="color" value="34" id="color-8C8C8C">
+                    <label for="color-8C8C8C"></label>
+
+                    <input type="radio" name="color" value="34" id="color-FF2200">
+                    <label for="color-FF2200"></label>
+
+                    <input type="radio" name="color" value="34" id="color-0051FF">
+                    <label for="color-0051FF"></label>
                 </fieldset>
 
-                <input type="submit" value="ADD TO CART">
+                <input type="submit" value="ADD TO CART" class="addToCart">
             </form>
         </div>
     </div>
