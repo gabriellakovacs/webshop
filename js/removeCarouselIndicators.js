@@ -30,7 +30,7 @@ function checkitem() {
 function changeDescription() {
  var activeImgId = $('#productCarousel .carousel-inner .active').attr('id');
  $(".productDescription .active").removeClass('active');
- $("."+activeImgId).addClass('active');
+ $("." + activeImgId).addClass('active');
 }
 
 $("#backToFirst").click(function(){
