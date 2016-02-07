@@ -21,6 +21,11 @@ a {
 /*------------------CAROUSEL------------------*/
 .carouselContainer img {
   margin: auto; }
+.carouselNavCircles .active {
+  background: #11dd76; }
+
+.carouselNavCircles li {
+  border-color: #11dd76; }
 
 #backToFirst {
   position: absolute;

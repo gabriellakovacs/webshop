@@ -19,36 +19,49 @@ $footerHeight: 20vh;
     -o-transition: all $time ease-out;
     -ms-transition: all $time ease-out; 
     transition: all $time ease-out;
-    }
+}
 
 
 
 /*------------------RESET------------------*/
 body {
     background: $mainBackground;
-    padding-top: 2%;min-height:100vh;
+    min-height:100vh;
     position: relative;
+    overflow-x:hidden;
+    padding-bottom: $footerHeight;
 }
 
 a {
     text-decoration:none;
-    color: #1fc3df;
 }
 
 /*------------------WINDOW SIZE PANEL------------------*/
-#windowSize {
+#showWindowSize {
     position: fixed;
     bottom: 0;
     right: 0;
-    color: grey;
-    border: 1px solid grey;
+    color: $showWindowSizeColor;
+    border: 2px solid $showWindowSizeColor;
     padding:1%;
 }
 /*------------------CAROUSEL------------------*/
-.carouselContainer img {
-    margin: auto;
+.carouselContainer {
+    padding-top:5%;
 }
 
+.carouselContainer img {
+    margin: auto;
+    height:$carouselAndDescriptionH;
+}
+
+.carouselNavCircles .active {
+    background: $carouselNav;
+}
+
+.carouselNavCircles li {
+    border-color: $carouselNav;
+}
 #backToFirst {
     position: absolute;
     bottom:5%;
