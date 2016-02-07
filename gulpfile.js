@@ -11,15 +11,15 @@ var gulp = require("gulp"),
 
  //compile sass files
 gulp.task('sass', function () {
-  gulp.src('*.scss')
+  gulp.src('css/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('css'));
 });
  
 
 //compile sass files on the go
 gulp.task('sasswatch', function () {
-  gulp.watch('*.scss', ['sass']);
+  gulp.watch('css/*.scss', ['sass']);
 });
 
 
