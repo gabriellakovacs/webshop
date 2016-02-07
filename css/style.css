@@ -1,7 +1,15 @@
+/*------------------RESET------------------*/
 body {
-  background: #000F14;
-  padding-top: 5%; }
+  background: #000000;
+  padding-top: 2%;
+  min-height: 100vh;
+  position: relative; }
 
+a {
+  text-decoration: none;
+  color: #1fc3df; }
+
+/*------------------WINDOW SIZE PANEL------------------*/
 #windowSize {
   position: fixed;
   bottom: 0;
@@ -10,11 +18,9 @@ body {
   border: 1px solid grey;
   padding: 1%; }
 
+/*------------------CAROUSEL------------------*/
 .carouselContainer img {
   margin: auto; }
-
-.glyphicon-chevron-left {
-  color: #ffffff; }
 
 #backToFirst {
   position: absolute;
@@ -31,44 +37,51 @@ body {
   cursor: pointer;
   visibility: hidden; }
 
-.chooseSize input, .chooseColor input {
-  visibility: hidden; }
+.carouselArrowContainer.left, .carouselArrowContainer.right {
+  background-image: none; }
 
+.carouselArrowContainer:disabled .glyphicon:hover {
+  color: red; }
+
+/*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
-  color: #FFFAF0; }
+  color: #1fc3df; }
+
 .productName, .productName + dd {
   display: none; }
 
 .productName.active, .productName.active + dd {
   display: inline; }
 
+.chooseSize input, .chooseColor input {
+  visibility: hidden; }
+
 .chooseSize label, .chooseColor label {
   width: 35px;
   height: 35px;
   line-height: 33px;
   text-align: center;
-  border: 2px solid #FFFAF0;
   cursor: pointer; }
 
+.chooseSize label {
+  background: #082e6d; }
+
 .chooseSize input:checked + label, .chooseColor input:checked + label {
-  border: 3px solid #FFFAF0;
+  border: 3px solid #1fc3df;
   border-radius: 60%; }
 
 .addToCart {
   background: none;
-  border: 1px solid #FFFAF0;
+  border: 1px solid #1fc3df;
   padding: 2%; }
 
 .addToCart:hover {
-  background: #FFFAF0;
-  color: #000F14; }
-
+  background: #1fc3df;
+  color: #000000; }
 
 dd, dt {
   display: inline; }
 
-.carouselArrowContainer.left, .carouselArrowContainer.right {
-  background-image: none; }
 /*------------------Recommended Section------------------*/
 .recommendedContainer {
   margin-bottom: 20vh;
