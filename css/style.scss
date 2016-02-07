@@ -97,4 +97,19 @@ dd, dt {
 
 .arrow {
     border:none;
+/*------------------Footer------------------*/
+
+footer {
+    position:absolute;
+    bottom:0;
+    
+    width:100vw;
+    background:grey;
+    color:white;
+    text-align:center;
+}
+
+.socialIcon {
+    width:40px;
+    height:40px;
 }
