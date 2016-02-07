@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var viewPort = $("#windowSize");
+	var viewPort = $("#showWindowSize");
 
 	getWindowSize = function() {
 		var height = $( window ).height();

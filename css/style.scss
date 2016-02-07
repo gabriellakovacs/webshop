@@ -101,6 +101,9 @@ a {
     padding:10%;
     padding-top:5%;
 }
+.productDescriptionContainer dl {
+    margin:0;
+}
 .productName, .productName + dd{
     display: none;
 }
@@ -126,6 +129,7 @@ a {
     border:none;
     color:inherit;
     font-weight:bold;
+    margin:0;
 }
 .chooseSize input, .chooseColor input{
     display: none;
@@ -139,11 +143,11 @@ a {
     color:black;
 }
 .chooseSize label {
-    background : transparentize($availableSizesBackground, .7);
+    background : $availableSizesBackground;
 }
 
 .chooseSize label:hover,  .chooseSize input:checked + label{
-    background : $availableSizesBackground;
+    background : white;
 }
 .chooseColor input:checked + label{
     border: 4px solid $availableSizesBackground;
