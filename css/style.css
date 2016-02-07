@@ -50,42 +50,65 @@ a {
 
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
-  color: #1fc3df; }
+  color: #ffffff;
+  height: 100vh;
+  padding: 10%;
+  padding-top: 5%; }
 
 .productName, .productName + dd {
   display: none; }
 
 .productName.active, .productName.active + dd {
+  display: block; }
+
+.productName {
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 120%;
+  color: #11dd76; }
+
+.productMaterial, .productMaterial + dd {
   display: inline; }
 
+.productPrice, .productPrice + dd {
+  display: inline; }
+
+.chooseSize legend, .chooseColor legend {
+  font-size: inherit;
+  border: none;
+  color: inherit;
+  font-weight: bold; }
+
 .chooseSize input, .chooseColor input {
-  visibility: hidden; }
+  display: none; }
 
 .chooseSize label, .chooseColor label {
   width: 35px;
   height: 35px;
   line-height: 33px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  color: black; }
 
 .chooseSize label {
-  background: #082e6d; }
+  background: rgba(17, 221, 118, 0.3); }
 
-.chooseSize input:checked + label, .chooseColor input:checked + label {
-  border: 3px solid #1fc3df;
-  border-radius: 60%; }
+.chooseSize label:hover, .chooseSize input:checked + label {
+  background: #11dd76; }
+
+.chooseColor input:checked + label {
+  border: 4px solid #11dd76; }
 
 .addToCart {
   background: none;
-  border: 1px solid #1fc3df;
-  padding: 2%; }
+  border: 1px solid #11dd76;
+  color: #11dd76;
+  padding: 2%;
+  margin-top: 3%; }
 
 .addToCart:hover {
-  background: #1fc3df;
+  background: #11dd76;
   color: #000000; }
-
-dd, dt {
-  display: inline; }
 
 /*------------------Recommended Section------------------*/
 .recommendedContainer {

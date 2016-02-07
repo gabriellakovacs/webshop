@@ -2,8 +2,11 @@ $mainBackground: #000000;
 $carouselNav: #ffffff;
 $productDescriptionColorAndBorder:  #1fc3df;
 $availableSizesBackground: #082e6d;
+$productDescriptionColorAndBorder:  #ffffff;
+$availableSizesBackground: rgba(17, 221, 118, 1);
 
 $footerHeight: 20vh;
+$carouselAndDescriptionH: 100vh;
 
 @mixin captionShow {
     -moz-transform: translateY(-100%);
@@ -88,15 +91,38 @@ a {
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
     color: $productDescriptionColorAndBorder;
+    height:$carouselAndDescriptionH;
+    padding:10%;
+    padding-top:5%;
 }
 .productName, .productName + dd{
     display: none;
 }
 .productName.active, .productName.active + dd {
+    display: block;
+}
+.productName {
+    text-align:center;
+    margin-bottom:5%;
+    font-size:120%;
+    color:$availableSizesBackground;
+}
+
+.productMaterial, .productMaterial + dd {
     display: inline;
 }
+
+.productPrice, .productPrice + dd {
+     display: inline;
+}
+.chooseSize legend, .chooseColor legend {
+    font-size:inherit;
+    border:none;
+    color:inherit;
+    font-weight:bold;
+}
 .chooseSize input, .chooseColor input{
-    visibility: hidden;
+    display: none;
 }
 .chooseSize label, .chooseColor label{
     width: 35px;
@@ -104,30 +130,30 @@ a {
     line-height: 33px;
     text-align: center;
     cursor: pointer;
+    color:black;
 }
 .chooseSize label {
+    background : transparentize($availableSizesBackground, .7);
+}
+
+.chooseSize label:hover,  .chooseSize input:checked + label{
     background : $availableSizesBackground;
 }
-.chooseSize input:checked + label, .chooseColor input:checked + label{
-    border: 3px solid $productDescriptionColorAndBorder;
-    border-radius: 60%;
+.chooseColor input:checked + label{
+    border: 4px solid $availableSizesBackground;
 }
 
 .addToCart {
     background: none;
-    border: 1px solid $productDescriptionColorAndBorder;
+    border: 1px solid $availableSizesBackground;
+    color: $availableSizesBackground;
     padding: 2%;
+    margin-top:3%;
 }
 .addToCart:hover {
-    background: $productDescriptionColorAndBorder;
+    background: $availableSizesBackground;
     color: $mainBackground;
 }
-
-
-dd, dt {
-    display: inline;
-}
-
 
 /*------------------Recommended Section------------------*/
 
