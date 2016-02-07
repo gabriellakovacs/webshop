@@ -1,11 +1,10 @@
 $mainBackground: #000000;
-$carouselNav: #ffffff;
-$productDescriptionColorAndBorder:  #1fc3df;
-$availableSizesBackground: #082e6d;
+$carouselNav: rgba(17, 221, 118, 1);
 $productDescriptionColorAndBorder:  #ffffff;
 $availableSizesBackground: rgba(17, 221, 118, 1);
+$showWindowSizeColor:rgba(17, 221, 118, 1);
 
-$footerHeight: 20vh;
+$footerHeight: 35vh;
 $carouselAndDescriptionH: 100vh;
 
 @mixin captionShow {
@@ -67,26 +66,33 @@ a {
 }
 #backToFirst {
     position: absolute;
-    bottom:5%;
+    bottom:2%;
     left:50%;
     z-index: 11;
-    width: 40%;
+    width: 30%;
     padding-left: 0;
-    margin-left: -20%;
+    margin-left: -15%;
     text-align: center;
-    text-align: center;
-    border: 1px solid $carouselNav;
-    color: $carouselNav;
+    background: transparentize($carouselNav, .5);
+    color: $mainBackground;
     cursor: pointer;
     visibility: hidden;
+    font-weight:bold;
+}
+
+#backToFirst:hover {
+    background: $carouselNav;
 }
 
 .carouselArrowContainer.left,  .carouselArrowContainer.right{
     background-image: none;
+    color:$carouselNav;
 }
 
-.carouselArrowContainer:disabled .glyphicon:hover {
-    color:red;
+.carouselArrowContainer.disabled:hover, .carouselArrowContainer.disabled {
+    cursor:default;
+    color:transparentize($carouselNav, .8);
+    opacity:inherit;
 }
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
@@ -158,7 +164,6 @@ a {
 /*------------------Recommended Section------------------*/
 
 .recommendedContainer {
-    margin-bottom:$footerHeight;
     width:100%;
     margin:0;
     padding:0;
@@ -171,7 +176,7 @@ a {
 
     .grid-item {
     overflow:hidden;
-    padding-left:4px;
+    border: 1vh solid black;
     }
 
     .grid-item:hover .caption {
@@ -190,14 +195,16 @@ a {
     }
     .caption{
         position:absolute;
-        bottom:-20px;
-        padding-top:8px;
-        padding-bottom:8px;
-        background:grey;
+        background:transparentize($carouselNav, .5);
         width:100%;
+        height:100%;
+        padding-top: 50%;
         text-align:center;
         @include captionTransition;
         opacity:0;
+        font-weight:bold;
+        font-size:100%;
+        color: $mainBackground;
         }
 
     img:hover {
@@ -215,14 +222,28 @@ a {
 footer {
     position:absolute;
     bottom:0;
-    
     width:100vw;
-    background:grey;
+    border: 2px dashed $availableSizesBackground;
     color:white;
     text-align:center;
+    padding:2%;
+    background:$mainBackground;
+}
+
+.email {
+    color:$availableSizesBackground;
+    margin-botttom:2%;
+}
+
+.email:hover {
+    color:$availableSizesBackground;
+    font-weight:bold;
+    text-decoration:none;
+
 }
 
 .socialIcon {
     width:40px;
     height:40px;
+    margin-top:2%;
 }

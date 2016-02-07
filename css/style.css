@@ -1,26 +1,31 @@
 /*------------------RESET------------------*/
 body {
   background: #000000;
-  padding-top: 2%;
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 35vh; }
 
 a {
-  text-decoration: none;
-  color: #1fc3df; }
+  text-decoration: none; }
 
 /*------------------WINDOW SIZE PANEL------------------*/
-#windowSize {
+#showWindowSize {
   position: fixed;
   bottom: 0;
   right: 0;
-  color: grey;
-  border: 1px solid grey;
+  color: #11dd76;
+  border: 2px solid #11dd76;
   padding: 1%; }
 
 /*------------------CAROUSEL------------------*/
+.carouselContainer {
+  padding-top: 5%; }
+
 .carouselContainer img {
-  margin: auto; }
+  margin: auto;
+  height: 100vh; }
+
 .carouselNavCircles .active {
   background: #11dd76; }
 
@@ -29,24 +34,30 @@ a {
 
 #backToFirst {
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   left: 50%;
   z-index: 11;
-  width: 40%;
+  width: 30%;
   padding-left: 0;
-  margin-left: -20%;
+  margin-left: -15%;
   text-align: center;
-  text-align: center;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  background: rgba(17, 221, 118, 0.5);
+  color: #000000;
   cursor: pointer;
-  visibility: hidden; }
+  visibility: hidden;
+  font-weight: bold; }
+
+#backToFirst:hover {
+  background: #11dd76; }
 
 .carouselArrowContainer.left, .carouselArrowContainer.right {
-  background-image: none; }
+  background-image: none;
+  color: #11dd76; }
 
-.carouselArrowContainer:disabled .glyphicon:hover {
-  color: red; }
+.carouselArrowContainer.disabled:hover, .carouselArrowContainer.disabled {
+  cursor: default;
+  color: rgba(17, 221, 118, 0.2);
+  opacity: inherit; }
 
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
@@ -112,7 +123,6 @@ a {
 
 /*------------------Recommended Section------------------*/
 .recommendedContainer {
-  margin-bottom: 20vh;
   width: 100%;
   margin: 0;
   padding: 0; }
@@ -122,7 +132,7 @@ a {
     position: relative; }
   .recommendedContainer .grid-item {
     overflow: hidden;
-    padding-left: 4px; }
+    border: 1vh solid black; }
   .recommendedContainer .grid-item:hover .caption {
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -140,18 +150,20 @@ a {
     -ms-filter: grayscale(1); }
   .recommendedContainer .caption {
     position: absolute;
-    bottom: -20px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background: grey;
+    background: rgba(17, 221, 118, 0.5);
     width: 100%;
+    height: 100%;
+    padding-top: 50%;
     text-align: center;
     -webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    opacity: 0; }
+    opacity: 0;
+    font-weight: bold;
+    font-size: 100%;
+    color: #000000; }
   .recommendedContainer img:hover {
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
@@ -164,10 +176,22 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  background: grey;
+  border: 2px dashed #11dd76;
   color: white;
-  text-align: center; }
+  text-align: center;
+  padding: 2%;
+  background: #000000; }
+
+.email {
+  color: #11dd76;
+  margin-botttom: 2%; }
+
+.email:hover {
+  color: #11dd76;
+  font-weight: bold;
+  text-decoration: none; }
 
 .socialIcon {
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  margin-top: 2%; }

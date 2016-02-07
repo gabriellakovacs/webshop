@@ -22,10 +22,12 @@ function checkitem() {
         $('.carousel-indicators').hide();
         $this.children('.carousel-control').show();
         $("#backToFirst").css('visibility', 'visible');
-        $this.children('.right.carousel-control').prop('disabled', false);
+        $this.children('.carouselArrowContainer.right').prop('disabled', false);
+        $this.children('.carouselArrowContainer.right').removeClass('disabled');
 
         if ($('.carousel-inner .item:last').hasClass('active')) {
-            $this.children('.right.carousel-control').prop('disabled', true);
+            $this.children('.carouselArrowContainer.right').prop('disabled', true);
+            $this.children('.carouselArrowContainer.right').addClass('disabled');
         
         }
     }
