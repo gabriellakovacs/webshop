@@ -36,6 +36,11 @@ body {
 
 .productDescriptionContainer {
   color: #FFFAF0; }
+.productName, .productName + dd {
+  display: none; }
+
+.productName.active, .productName.active + dd {
+  display: inline; }
 
 .chooseSize label, .chooseColor label {
   width: 35px;
@@ -58,11 +63,6 @@ body {
   background: #FFFAF0;
   color: #000F14; }
 
-.productDescription p {
-  display: none; }
-
-.productDescription .active {
-  display: inline; }
 
 dd, dt {
   display: inline; }

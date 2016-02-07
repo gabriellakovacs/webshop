@@ -43,6 +43,12 @@ body {
     color: $productDescriptionColorAndBorder;
 }
 
+.productName, .productName + dd{
+    display: none;
+}
+.productName.active, .productName.active + dd {
+    display: inline;
+}
 .chooseSize label, .chooseColor label{
     width: 35px;
     height: 35px;
@@ -70,12 +76,6 @@ body {
     color: $mainBackground;
 }
 
-.productDescription p {
-    display: none;
-}
-.productDescription .active {
-    display: inline;
-}
 dd, dt {
     display: inline;
 }
