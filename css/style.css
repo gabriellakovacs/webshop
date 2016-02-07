@@ -69,6 +69,16 @@ dd, dt {
 
 .carouselArrowContainer.left, .carouselArrowContainer.right {
   background-image: none; }
+/*------------------Recommended Section------------------*/
+.recommendedProductContainer {
+  height: 200px;
+  background: none;
+  border: 1px solid white; }
+
+.recommendedProductImg {
+  max-width: 80%;
+  max-height: 80%;
+  padding-left: 50%; }
 
 .arrow {
   border: none; }
