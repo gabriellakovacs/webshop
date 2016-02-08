@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  padding-bottom: 40vh; }
+  padding-bottom: 50vh; }
 
 a {
   text-decoration: none; }
@@ -216,4 +216,4 @@ footer {
     width: 5vw;
     height: 5vw; }
   body {
-    padding-bottom: 35vw; } }
+    padding-bottom: 40vw; } }

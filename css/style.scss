@@ -4,7 +4,7 @@ $productDescriptionColorAndBorder:  rgba(255, 255, 255, 1);
 $availableSizesBackground: rgba(240, 7, 58, 1);
 $showWindowSizeColor: rgba(240, 7, 58, 1);
 
-$footerHeight: 40vh;
+$footerHeight: 50vh;
 $carouselAndDescriptionH: 100vh;
 
 @mixin captionShow {
@@ -282,6 +282,6 @@ footer {
     }
 
     body {
-        padding-bottom: 35vw;
+        padding-bottom: 40vw;
     }
 }
