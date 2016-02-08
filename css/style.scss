@@ -55,6 +55,7 @@ a {
     color: $mainBackground;
     background: $showWindowSizeColor;
     padding:1%;
+    -webkit-backface-visibility: hidden;
 
 }
 

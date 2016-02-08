@@ -19,7 +19,8 @@ a {
   right: 0;
   color: black;
   background: #f0073a;
-  padding: 1%; }
+  padding: 1%;
+  -webkit-backface-visibility: hidden; }
 
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
