@@ -35,7 +35,6 @@ $carouselAndDescriptionH: 100vh;
 body {
     background: $mainBackground;
     min-height:100vh;
-    width:100vw;
     position: relative;
     overflow-x:hidden;
     padding-bottom: $footerHeight;
@@ -47,6 +46,9 @@ a {
 * {
     box-sizing: border-box;
 }
+.carouselAndDescriptionContainer {
+    margin:0; /*reset bootsrap .row margin*/
+}
 
 /*------------------WINDOW SIZE PANEL------------------*/
 #showWindowSize {
@@ -56,8 +58,6 @@ a {
     color: $mainBackground;
     background: $showWindowSizeColor;
     padding:1%;
-    -webkit-backface-visibility: hidden;
-
 }
 
 /*------------------CAROUSEL------------------*/
