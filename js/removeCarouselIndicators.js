@@ -11,7 +11,7 @@ $(document).ready(function () {
     showcaseProductsCarousel.on('slid.bs.carousel', changeDescription);
 
     showcaseProductsCarousel.carousel({
-        interval: 10000,
+        interval: false,
     })
 
     function customizeCarouselNavigation() {
