@@ -57,10 +57,14 @@ a {
     padding:1%;
 
 }
+/*------------------CAROUSEL AND DESCRIPTION------------------*/
+.carouselAndDescriptionContainer {
+    height:$carouselAndDescriptionH;
+}
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
-    padding-top:5%;
-    height:$carouselAndDescriptionH;
+    top:50%;
+    transform: translate(0%, -50%);
 }
 
 .carouselContainer img {
@@ -107,9 +111,9 @@ a {
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
     color: $productDescriptionColorAndBorder;
-    height:$carouselAndDescriptionH;
     padding:10%;
-    padding-top:5%;
+    top:50%;
+    transform: translate(0%, -50%);
 }
 .productDescriptionContainer dl {
     margin:0;
@@ -261,7 +265,7 @@ footer {
 }
 
 @media (max-width: 767px) {
-    .carouselContainer, .productDescriptionContainer {
+    .carouselAndDescriptionContainer {
         height:auto;
     }
     
