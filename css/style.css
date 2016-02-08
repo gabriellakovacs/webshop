@@ -1,6 +1,6 @@
 /*------------------RESET------------------*/
 body {
-  background: #000000;
+  background: black;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -17,8 +17,8 @@ a {
   position: fixed;
   bottom: 0;
   right: 0;
-  color: #f0073a;
-  border: 2px solid #f0073a;
+  color: black;
+  background: #f0073a;
   padding: 1%; }
 
 /*------------------CAROUSEL------------------*/
@@ -39,16 +39,16 @@ a {
   position: absolute;
   bottom: 2%;
   left: 50%;
-  z-index: 11;
   width: 30%;
-  padding-left: 0;
   margin-left: -15%;
+  padding-left: 0;
   text-align: center;
   background: rgba(240, 7, 58, 0.5);
-  color: #000000;
+  color: black;
   cursor: pointer;
   visibility: hidden;
-  font-weight: bold; }
+  font-weight: bold;
+  z-index: 11; }
 
 #backToFirst:hover {
   background: #f0073a; }
@@ -64,7 +64,7 @@ a {
 
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
-  color: #ffffff;
+  color: white;
   height: 100vh;
   padding: 10%;
   padding-top: 5%; }
@@ -101,9 +101,9 @@ a {
   display: none; }
 
 .chooseSize label, .chooseColor label {
-  width: 35px;
-  height: 35px;
-  line-height: 33px;
+  width: 5vh;
+  height: 5vh;
+  line-height: 5vh;
   text-align: center;
   cursor: pointer;
   color: black; }
@@ -130,7 +130,7 @@ a {
 
 .addToCart:hover {
   background: #f0073a;
-  color: #000000; }
+  color: black; }
 
 /*------------------Recommended Section------------------*/
 .recommendedContainer {
@@ -143,7 +143,7 @@ a {
     position: relative; }
   .recommendedContainer .grid-item {
     overflow: hidden;
-    border: 1vh solid #000000; }
+    border: 1vh solid black; }
   .recommendedContainer .grid-item:hover .caption {
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -181,7 +181,7 @@ footer {
   color: white;
   text-align: center;
   padding: 2%;
-  background: #000000; }
+  background: black; }
 
 .email {
   color: #f0073a;
@@ -193,8 +193,8 @@ footer {
   text-decoration: none; }
 
 .socialIcon {
-  width: 40px;
-  height: 40px;
+  width: 5vh;
+  height: 5vh;
   margin-top: 2%; }
 
 /*------------------MEDIA QUERY------------------*/
