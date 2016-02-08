@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  padding-bottom: 35vh; }
+  padding-bottom: 40vh; }
 
 a {
   text-decoration: none; }
@@ -21,14 +21,10 @@ a {
   background: #f0073a;
   padding: 1%; }
 
-/*------------------CAROUSEL AND DESCRIPTION------------------*/
-.carouselAndDescriptionContainer {
-  height: 100vh; }
-
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
-  top: 50%;
-  transform: translate(0%, -50%); }
+  margin-top: 15vh;
+  margin-bottom: 15vh; }
 
 .carouselContainer img {
   margin: auto; }
@@ -69,9 +65,10 @@ a {
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
   color: white;
-  padding: 10%;
-  top: 50%;
-  transform: translate(0%, -50%); }
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 15vh;
+  margin-bottom: 15vh; }
 
 .productDescriptionContainer dl {
   margin: 0; }

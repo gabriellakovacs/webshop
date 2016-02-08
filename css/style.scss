@@ -4,7 +4,7 @@ $productDescriptionColorAndBorder:  rgba(255, 255, 255, 1);
 $availableSizesBackground: rgba(240, 7, 58, 1);
 $showWindowSizeColor: rgba(240, 7, 58, 1);
 
-$footerHeight: 35vh;
+$footerHeight: 40vh;
 $carouselAndDescriptionH: 100vh;
 
 @mixin captionShow {
@@ -57,14 +57,11 @@ a {
     padding:1%;
 
 }
-/*------------------CAROUSEL AND DESCRIPTION------------------*/
-.carouselAndDescriptionContainer {
-    height:$carouselAndDescriptionH;
-}
+
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
-    top:50%;
-    transform: translate(0%, -50%);
+    margin-top:15vh;
+    margin-bottom:15vh;
 }
 
 .carouselContainer img {
@@ -111,9 +108,10 @@ a {
 /*------------------DESCRIPTION------------------*/
 .productDescriptionContainer {
     color: $productDescriptionColorAndBorder;
-    padding:10%;
-    top:50%;
-    transform: translate(0%, -50%);
+    padding-left:10%;
+    padding-right:10%;
+    margin-top:15vh;
+    margin-bottom:15vh;
 }
 .productDescriptionContainer dl {
     margin:0;
