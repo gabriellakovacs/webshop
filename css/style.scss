@@ -35,6 +35,7 @@ $carouselAndDescriptionH: 100vh;
 body {
     background: $mainBackground;
     min-height:100vh;
+    width:100vw;
     position: relative;
     overflow-x:hidden;
     padding-bottom: $footerHeight;
