@@ -200,33 +200,22 @@ a {
     img{
         position:relative;
         width:100%;
-        border-bottom:3px solid transparent;
-        filter: grayscale(1);
-        -webkit-filter: grayscale(1);
-        -moz-filter: grayscale(1);
-        -o-filter: grayscale(1);
-        -ms-filter: grayscale(1);
     }
-    .caption{
+    .caption {
         position:absolute;
-        background:transparentize($carouselNav, .5);
+        background:transparentize($carouselNav, .3);
         width:100%;
         height:100%;
-        padding-top: 50%;
-        text-align:center;
         @include captionTransition;
         opacity:0;
-        font-weight:bold;
-        font-size:100%;
         color: $mainBackground;
         }
-
-    img:hover {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -o-filter: grayscale(0);
-    -ms-filter: grayscale(0);
+    .innerCaption {
+        position:relative;
+        top:50%;
+        text-align:center;
+        font-size:130%;
+        font-weight:bold;
     }
 
 }
