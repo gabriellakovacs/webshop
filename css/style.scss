@@ -1,8 +1,8 @@
 $mainBackground: #000000;
-$carouselNav: rgba(17, 221, 118, 1);
+$carouselNav: rgba(240, 7, 58, 1);
 $productDescriptionColorAndBorder:  #ffffff;
-$availableSizesBackground: rgba(17, 221, 118, 1);
-$showWindowSizeColor:rgba(17, 221, 118, 1);
+$availableSizesBackground: rgba(240, 7, 58, 1);
+$showWindowSizeColor: rgba(240, 7, 58, 1);
 
 $footerHeight: 35vh;
 $carouselAndDescriptionH: 100vh;
@@ -23,6 +23,12 @@ $carouselAndDescriptionH: 100vh;
     transition: all $time ease-out;
 }
 
+@mixin rotateSelection ($angle:30deg) {
+    -ms-transform: rotate($angle);
+    -webkit-transform: rotate($angle);
+    transform: rotate($angle);
+}
+
 
 
 /*------------------RESET------------------*/
@@ -36,6 +42,9 @@ body {
 
 a {
     text-decoration:none;
+}
+* {
+    box-sizing: border-box;
 }
 
 /*------------------WINDOW SIZE PANEL------------------*/
@@ -147,10 +156,11 @@ a {
 }
 
 .chooseSize label:hover,  .chooseSize input:checked + label{
-    background : white;
+    @include rotateSelection;
+    
 }
-.chooseColor input:checked + label{
-    border: 4px solid $availableSizesBackground;
+.chooseColor label:hover, .chooseColor input:checked + label{
+    @include rotateSelection;
 }
 
 .addToCart {
@@ -180,7 +190,7 @@ a {
 
     .grid-item {
     overflow:hidden;
-    border: 1vh solid black;
+    
     }
 
     .grid-item:hover .caption {
@@ -227,7 +237,7 @@ footer {
     position:absolute;
     bottom:0;
     width:100vw;
-    border: 2px dashed $availableSizesBackground;
+    border-top: 2px dashed $availableSizesBackground;
     color:white;
     text-align:center;
     padding:2%;
