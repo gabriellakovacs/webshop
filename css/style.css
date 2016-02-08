@@ -206,3 +206,14 @@ footer {
 @media (max-width: 767px) {
   .carouselAndDescriptionContainer {
     height: auto; } }
+
+@media (max-width: 800px) and (orientation: landscape) {
+  .chooseSize label, .chooseColor label {
+    width: 5vw;
+    height: 5vw;
+    line-height: 5vw; }
+  .socialIcon {
+    width: 5vw;
+    height: 5vw; }
+  body {
+    padding-bottom: 35vw; } }
