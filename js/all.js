@@ -1,18 +1,17 @@
-$(document).ready(function () {  
+'use strict';
+$(document).ready(function () {
 
-    var colorOptionList = document. querySelectorAll(".chooseColor label"); 
-    var showcaseProductsCarousel =  $('#productCarousel');   
-
-    setBackgroundColorForColorOptions();
-
-    customizeCarouselNavigation();
+    /*------------------CUSTOMIZE CAROUSEL NAVIGATION------------------*/
+    var showcaseProductsCarousel = $('#productCarousel'); 
+    
+    customizeCarouselNavigation(); 
 
     showcaseProductsCarousel.on('slid.bs.carousel', customizeCarouselNavigation);
     showcaseProductsCarousel.on('slid.bs.carousel', changeDescription);
 
     showcaseProductsCarousel.carousel({
-        interval: false,
-    })
+        interval: false
+    });
 
     function customizeCarouselNavigation() {
         carouselBackToFirstSlideButton();
@@ -25,13 +24,6 @@ $(document).ready(function () {
         var activeImgId = $('#productCarousel .carousel-inner .active').attr('id');
         $(".productName.active").removeClass('active');
         $("." + activeImgId).addClass('active');
-    }
-
-    function setBackgroundColorForColorOptions() {
-        for (var l = 0; l < colorOptionList.length; l++) {
-            var color = (colorOptionList[l].htmlFor).split("-")[1];
-            colorOptionList[l].style.background = "#" + color;
-        }
     }
 
     function carouselIndicatorsOnlyOnFirstSlide() {
@@ -63,11 +55,10 @@ $(document).ready(function () {
         }
     }
 
-
     function carouselBackToFirstSlideButton() {
         var $this = $('#productCarousel');
         if ($('.carousel-inner .item:first').hasClass('active')) {
-             $("#backToFirst").css('visibility', 'hidden');
+            $("#backToFirst").css('visibility', 'hidden');
         } else {
             $("#backToFirst").css('visibility', 'visible');
         }
@@ -82,20 +73,54 @@ $(document).ready(function () {
         customizeCarouselNavigation();
     });
 
+
+    /*------------------GET WINDOW HEIGHT AND WIDTH------------------*/
+    var showWindowSizeBox = $("#showWindowSize"); 
+
+    getWindowSize();
+
+    $( window ).resize(debounce(function (event) {
+        getWindowSize();
+    }, 250));
+
+    function getWindowSize() {
+        var height = $( window ).height();
+        var width = $( window ).width();
+        showWindowSizeBox.html(width + " x " + height);
+    }
+
+    function debounce(fn, delay) {
+        var timer = null;
+        return function () {
+            var context = this, args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn.apply(context, args);
+            }, delay);
+        };
+    }
+    /*------------------SET COLOR CHOICE BACKGROUND TO GIVEN COLOR------------------*/
+
+    var colorOptionList = document.querySelectorAll(".chooseColor label");
+
+
+    $.each(colorOptionList, setBackgroundColorForColorOptions);
+
+     function setBackgroundColorForColorOptions(index) {
+            var color = (colorOptionList[index].htmlFor).split("-")[1];
+            colorOptionList[index].style.background = "#" + color;
+    }
+
+
 });
 
+
+/*the images in the recommended section need to be loaded for masonry to work properly*/
 window.onload = function() {
     $('.grid').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
         itemSelector: '.grid-item',
-        // use element for option
         columnWidth: '.grid-sizer',
         percentPosition: true
     })
-           
+
 }
-
-
-
-
-
