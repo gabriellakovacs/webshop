@@ -59,11 +59,11 @@ a {
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
     padding-top:5%;
+    height:$carouselAndDescriptionH;
 }
 
 .carouselContainer img {
     margin: auto;
-    height:$carouselAndDescriptionH;
 }
 
 .carouselNavCircles .active {
@@ -190,7 +190,7 @@ a {
 
     .grid-item {
     overflow:hidden;
-    
+    border:1vh solid $mainBackground;
     }
 
     .grid-item:hover .caption {
@@ -260,4 +260,19 @@ footer {
     width:40px;
     height:40px;
     margin-top:2%;
+}
+
+/*------------------MEDIA QUERY------------------*/
+@media (max-width: 500px) {
+
+    .recommendedContainer .grid-item,.recommendedContainer .grid-sizer {
+        width:33%;
+    }
+}
+
+@media (max-width: 767px) {
+    .carouselContainer, .productDescriptionContainer {
+        height:auto;
+    }
+    
 }

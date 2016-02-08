@@ -23,11 +23,11 @@ a {
 
 /*------------------CAROUSEL------------------*/
 .carouselContainer {
-  padding-top: 5%; }
+  padding-top: 5%;
+  height: 100vh; }
 
 .carouselContainer img {
-  margin: auto;
-  height: 100vh; }
+  margin: auto; }
 
 .carouselNavCircles .active {
   background: #f0073a; }
@@ -142,7 +142,8 @@ a {
     width: 20%;
     position: relative; }
   .recommendedContainer .grid-item {
-    overflow: hidden; }
+    overflow: hidden;
+    border: 1vh solid #000000; }
   .recommendedContainer .grid-item:hover .caption {
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -205,3 +206,12 @@ footer {
   width: 40px;
   height: 40px;
   margin-top: 2%; }
+
+/*------------------MEDIA QUERY------------------*/
+@media (max-width: 500px) {
+  .recommendedContainer .grid-item, .recommendedContainer .grid-sizer {
+    width: 33%; } }
+
+@media (max-width: 767px) {
+  .carouselContainer, .productDescriptionContainer {
+    height: auto; } }
